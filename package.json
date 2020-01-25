@@ -6,7 +6,8 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.3",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.2"
@@ -15,5 +16,31 @@
     "start": "nodemon server.js"
   },
   "author": "Lambda School",
-  "license": "ISC"
+  "license": "ISC",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "\\.(css|less|sass|scss)$/": "C:/Users/nate1/Documents/GitHub/Sprint-Challenge-Advanced-React/client/__mocks__/styleMock.js"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node",
+      "mjs"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  }
 }
